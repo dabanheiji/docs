@@ -519,7 +519,7 @@ mutate(data?: TData | ((oldData?: TData) => TData | undefined)) {
 
 然后我们整理一下`useRequest`的设计架构图
 
-![画板](https://cdn.nlark.com/yuque/0/2022/jpeg/22838004/1662901447744-453875be-9995-49e0-8fc2-b2f000209670.jpeg)
+![架构图](static/image.png)
 
 ## 插件
 ### 插件的结构&小插件demo
@@ -546,7 +546,7 @@ mutate(data?: TData | ((oldData?: TData) => TData | undefined)) {
 
 只看表格可能不太清晰，我们再来看一下生命周期流程图：
 
-![画板](https://cdn.nlark.com/yuque/0/2022/jpeg/22838004/1662631995679-94292e81-609d-4524-9b03-b49dbfee6282.jpeg)
+![生命周期](static/image-1.png)
 
 而在`useRequestImplement.ts`中我们知道所有的插件都传入了`fetchInstance`和`fetchOptions`两个参数，并且每个插件会返回一个包含各个生命周期事件的对象，那么现在我们就大致知道一个插件的代码大致是一个什么样的结构了。
 
@@ -1244,7 +1244,7 @@ const subscribe = (key: string, listener: Listener) => {
 
 缓存策略图解：
 
-![画板](https://cdn.nlark.com/yuque/0/2023/jpeg/22838004/1692932663882-6f89f26b-bc51-4a15-b2d3-cb8748f1c9f7.jpeg)
+![缓存策略图](static/image-2.png)
 
 因为在初始化的时候绑定了订阅事件，所以在`state.data`更新后，会执行订阅事件去更新缓存的数据，捋清楚这一点，我们再来看一下这个插件的生命周期有哪些，并且在里面都分别做了什么事情：
 
