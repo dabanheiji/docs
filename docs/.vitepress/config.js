@@ -9,7 +9,6 @@ export default {
     assetsDir: 'static',
     ignoreDeadLinks: true,
     themeConfig: {
-        siteTitle: '瓜娃子的秘密花园',
         search: {
             provider: 'local'
         },      
