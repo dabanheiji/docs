@@ -13,10 +13,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-
-      - name: Install Dependencies
-        run: npm config set registry https://registry.npmmirror.com
-        run: npm install
+      - run: npm config set registry https://registry.npmmirror.com
+      - run: npm i
 
       - name: Build Docs
         run: npm run build
@@ -26,4 +24,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/.vitepress/dist
-
