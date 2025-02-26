@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # 关键：授予推送权限
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
