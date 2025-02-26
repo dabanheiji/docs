@@ -13,9 +13,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: npm i 
 
-      - name: Build
+      - name: Install Dependencies
+        run: npm config set registry https://registry.npmmirror.com
+        run: npm install
+
+      - name: Build Docs
         run: npm run build
 
       - name: Deploy
