@@ -13,3 +13,5 @@ hero:
       text: GitHub
       link: https://github.com/dabanheiji
 ---
+
+测试首页
