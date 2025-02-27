@@ -33,6 +33,10 @@ export default {
                             text: 'React',  
                             collapsed: true,
                             items: [
+                                { 
+                                    text: 'React 中的逻辑复用',
+                                    link: '/skill/react/logic'
+                                },
                                 {
                                     text: 'ahooks',
                                     collapsed: true,
