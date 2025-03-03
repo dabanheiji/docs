@@ -38,6 +38,20 @@ export default {
                                     link: '/skill/react/logic'
                                 },
                                 {
+                                    text: 'React 原理学习',
+                                    collapsed: true,
+                                    items: [
+                                        {
+                                            text: 'React 结构',
+                                            link: '/skill/react/principle/pack'
+                                        },
+                                        {
+                                            text: 'React 中常用对象',
+                                            link: '/skill/react/principle/object'
+                                        }
+                                    ]
+                                },
+                                {
                                     text: 'ahooks',
                                     collapsed: true,
                                     items: [
